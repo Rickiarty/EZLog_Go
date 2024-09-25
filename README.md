@@ -8,7 +8,9 @@ go get -u github.com/Rickiarty/EZLog_Go@latest
 // go.mod
 module github.com/yourusername/GoTEST
 
+
 go 1.22
+
 
 require (
     github.com/Rickiarty/EZLog_Go v1.0.0
@@ -19,13 +21,21 @@ require (
 package main
 
 import (
+
     ...
+    
     ez "github.com/Rickiarty/EZLog_Go/ezlog"
+    
     ...
+    
 )
 
 func main() {
+
 	ez.EZLog("This is a detailed message")
+ 
 	ez.EZLog("This is a detailed message", 1)
+ 
 	ez.EZLog("This is a detailed message", 1, "DEBUG")
+ 
 }
