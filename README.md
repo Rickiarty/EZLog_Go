@@ -1,6 +1,15 @@
 # EZLog_Go
 an easy logger without setting via Go Modules on GitHub platform
 
+to clean cache:
+```
+go clean -modcache
+```
+to download modules and generate a "go.sum" file:
+```
+go mod tidy
+```
+to download the module:
 ```
 go get -u github.com/Rickiarty/EZLog_Go@latest
 ```
