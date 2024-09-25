@@ -13,7 +13,7 @@ func EZLog(detailedMsg string, params ...interface{}) (bool, string) {
 	// default values
 	selfDefinedCode := 0
 	selfDefinedTag := "INFO"
-	logDirPath := filepath.Abs("./_EZLOG_")
+	logDirPath, _ := filepath.Abs("./_EZLOG_")
 
 	// Set customized parameters, if any.
 	if len(params) > 0 {
@@ -28,7 +28,7 @@ func EZLog(detailedMsg string, params ...interface{}) (bool, string) {
 	}
 	if len(params) > 2 {
 		if path, ok := params[2].(string); ok {
-			logDirPath := filepath.Abs(path)
+			logDirPath, _ = filepath.Abs(path)
 		}
 	}
 
