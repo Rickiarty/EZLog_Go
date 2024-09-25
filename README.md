@@ -6,6 +6,7 @@ go get -u github.com/Rickiarty/EZLog_Go@latest
 
 
 // go.mod
+
 module github.com/yourusername/GoTEST
 
 
@@ -18,6 +19,7 @@ require (
 
 
 // main.go
+
 package main
 
 import (
