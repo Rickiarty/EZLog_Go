@@ -52,14 +52,13 @@ func EZLog(detailedMsg string, params ...interface{}) (bool, string) {
 	}
 
 	defer file.Close()
-	
+
 	logMessage := fmt.Sprintf("[%d：%s]\n%s\n== %s (UTC：%s) ==\n",
-		selfDefinedCode, 
-		selfDefinedTag, 
+		selfDefinedCode,
+		selfDefinedTag,
 		detailedMsg,
 		now.Format("2006/01/02T15:04:05.000000"),
-		now.UTC().Format("2006/01/02T15:04:05.000000")
-	)
+		now.UTC().Format("2006/01/02T15:04:05.000000"))
 
 	if _, err := file.WriteString(logMessage); err != nil {
 		fmt.Println(logMessage)
